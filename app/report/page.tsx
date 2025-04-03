@@ -9,6 +9,7 @@ import { useToast } from '@/components/ui/use-toast';
 import { FileText } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 import { useAuth } from '@/contexts/auth-context';
+import { Suspense } from 'react';
 
 interface TransactionData {
   type: string;
@@ -279,4 +280,10 @@ const ReportPage = () => {
   );
 };
 
-export default ReportPage;
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ReportPage />
+    </Suspense>
+  );
+}
