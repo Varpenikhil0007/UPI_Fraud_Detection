@@ -41,10 +41,10 @@ export default function Home() {
               <Link href="#" className="text-purple-600 font-medium">
                 IFDAS for Fraud Teams
               </Link>
-              <Link href="#" className="text-gray-700 font-medium">
+              {/* <Link href="#" className="text-gray-700 font-medium">
                 Pricing
-              </Link>
-              <Link href="#" className="text-gray-700 font-medium">
+              </Link> */}
+              <Link href="/UPI_ResearchPaper[2].pdf" className="text-gray-700 font-medium">
                 Docs
               </Link>
             </div>
