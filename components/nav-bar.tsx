@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { ChevronDown, Menu, X, LogOut } from "lucide-react"
+import { ChevronDown, Menu, X, LogOut, FileText, Home, AlertTriangle, HelpCircle, Users, Bell, ClipboardList } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useAuth } from "@/contexts/auth-context"
 import {
@@ -66,12 +66,16 @@ const NavBar = () => {
                 EMI Calculator
               </Link> */}
               <Link href="/report" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900">
+                <FileText className="inline-block mr-2 h-4 w-4" />
                 Reports
               </Link>
+
               <Link href="/alerts" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900">
+                <Bell className="inline-block mr-2 h-4 w-4" />
                 Alerts
               </Link>
               <Link href="/help" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900">
+                <HelpCircle className="inline-block mr-2 h-4 w-4" />
                 Help/FAQ
               </Link>
               {/* <Link href="/campaign" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900">
@@ -94,6 +98,12 @@ const NavBar = () => {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
+                  <DropdownMenuItem asChild>
+                    <Link href="/my-reports" className="flex items-center">
+                      <ClipboardList className="mr-2 h-4 w-4" />
+                      My Reports
+                    </Link>
+                  </DropdownMenuItem>
                   <DropdownMenuItem onClick={logout} className="text-red-600">
                     <LogOut className="mr-2 h-4 w-4" />
                     Logout
@@ -101,7 +111,7 @@ const NavBar = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
-              <Link href="/auth/login">
+              <Link href="/auth">
                 <Button variant="secondary" className="bg-purple-100 hover:bg-purple-200 text-purple-600">
                   Sign in
                   <ChevronDown size={16} className="ml-1" />
@@ -163,7 +173,7 @@ const NavBar = () => {
             <Link href="#" className="block px-3 py-2 text-base font-medium text-purple-600">
               Contact sales
             </Link>
-            <Link href="#" className="block px-3 py-2 text-base font-medium text-purple-600">
+            <Link href="/auth" className="block px-3 py-2 text-base font-medium text-purple-600">
               Sign in
             </Link>
           </div>
