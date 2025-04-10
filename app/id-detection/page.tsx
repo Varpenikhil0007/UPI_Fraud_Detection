@@ -35,7 +35,7 @@ const IdDetectionPage = () => {
       const isValidFormat = /^[A-Za-z0-9]{10,20}$/.test(id); // still check format
   
       // 🚨 Always call backend regardless of format
-      const response = await fetch('http://localhost:5000/api/id/validate', {
+      const response = await fetch('https://localhost:5000/api/id/validate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id })
