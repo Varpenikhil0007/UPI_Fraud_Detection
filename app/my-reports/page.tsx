@@ -48,7 +48,7 @@ const MyReportsPage = () => {
           throw new Error('Authentication token not found');
         }
 
-        const response = await fetch('https://localhost:5000/api/reports/user', {
+        const response = await fetch('http://localhost:5000/api/reports/user', {
           headers: authHeader,
         });
 

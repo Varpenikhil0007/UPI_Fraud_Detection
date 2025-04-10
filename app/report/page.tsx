@@ -54,7 +54,7 @@ const ReportPage = () => {
     console.log('Current user:', user);
     setIsLoading(true);
     try {
-      const baseUrl =  'https://localhost:5000/api';
+      const baseUrl =  'http://localhost:5000/api';
       console.log('Making request to:', `${baseUrl}/reports`);
       
       // Get auth header and ensure token exists

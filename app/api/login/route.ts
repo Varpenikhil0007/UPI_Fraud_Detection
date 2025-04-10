@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
   try {
-    const baseUrl = process.env.API_URL || 'https://localhost:5000/api';
+    const baseUrl = process.env.API_URL || 'http://localhost:5000/api';
     const data = await request.json();
 
     const response = await fetch(`${baseUrl}/auth/login`, {

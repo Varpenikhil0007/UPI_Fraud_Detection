@@ -137,7 +137,7 @@ const UpiFraudDetectionPage = () => {
           <div className="w-full flex justify-center items-center max-w-4xl mx-auto mt-8 px-4">
             <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-xl shadow-lg w-full">
               <iframe
-                src="https://www.youtube.com/embed/iI2NaN_QVTI"
+                src="http://www.youtube.com/embed/iI2NaN_QVTI"
                 title="UPI Fraud Detection Video"
                 className="absolute top-0 left-0 w-full h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
