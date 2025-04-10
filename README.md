@@ -13,7 +13,7 @@
 
 </div>
 
-# <div align="center">Online Payment Fraud Detection (Anamoly detection) using Isolation forest and LOF</div>
+# <div align="center">Online Payment Fraud Detection (Anamoly detection) using Isolation forest </div>
 <div align="center">
 <img src = "https://github.com/Pradnya1208/Credit-card-fraud-detection-using-Isolation-Forest-and-LOF/blob/main/output/anomaly_detection.png?raw=true" width="60%">
 </div>
@@ -67,10 +67,6 @@ How Isolation Forests Work The Isolation Forest algorithm isolates observations 
 
 The way that the algorithm constructs the separation is by first creating isolation trees, or random decision trees. Then, the score is calculated as the path length to isolate the observation.
 
-### Local Outlier Factor(LOF) Algorithm:
-The LOF algorithm is an unsupervised outlier detection method which computes the local density deviation of a given data point with respect to its neighbors. It considers as outlier samples that have a substantially lower density than their neighbors.
-
-The number of neighbors considered, (parameter n_neighbors) is typically chosen 1) greater than the minimum number of objects a cluster has to contain, so that other objects can be local outliers relative to this cluster, and 2) smaller than the maximum number of close by objects that can potentially be local outliers. In practice, such informations are generally not available, and taking n_neighbors=20 appears to work well in general.
 
 ```
 classifiers = {
@@ -100,20 +96,7 @@ Classification Report :
 weighted avg       1.00      1.00      1.00     28481
 ```
 ```
-Local Outlier Factor: 97
-Accuracy Score :
-0.9965942207085425
-Classification Report :
-              precision    recall  f1-score   support
 
-           0       1.00      1.00      1.00     28432
-           1       0.02      0.02      0.02        49
-
-    accuracy                           1.00     28481
-   macro avg       0.51      0.51      0.51     28481
-weighted avg       1.00      1.00      1.00     28481
-```
-```
 Support Vector Machine: 8516
 Accuracy Score :
 0.7009936448860644
@@ -137,7 +120,7 @@ weighted avg       1.00      0.70      0.82     28481
 ### Lessons Learned
 `Anamoly Detection`
 `Isolation Forest Algorithm`
-`Local Outlier Factor(LOF) Algorithm¶`
+
 
 
 
