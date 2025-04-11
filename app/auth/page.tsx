@@ -42,7 +42,7 @@ export default function AuthPage() {
     setIsLoading(true);
 
     try {
-      const baseUrl = 'http://localhost:5000/api';
+      const baseUrl = 'https://upi-fraud-detection-backend1.onrender.com';
       
       if (currentState === 'Sign Up') {
         const response = await fetch(`${baseUrl}/auth/register`, {

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
   try {
-    const baseUrl = process.env.API_URL || 'http://localhost:5000/api';
+    const baseUrl = process.env.API_URL || 'https://upi-fraud-detection-backend1.onrender.com';
     const data = await request.json();
 
     const response = await fetch(`${baseUrl}/auth/login`, {
