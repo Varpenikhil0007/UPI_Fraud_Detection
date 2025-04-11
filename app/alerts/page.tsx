@@ -37,6 +37,7 @@ const AlertEducationPage = () => {
                 content: 'Look for HTTPS and padlock icon in browser'
               },
               {
+                
                 title: 'Enable 2FA',
                 content: 'Use two-factor authentication for all accounts'
               },
