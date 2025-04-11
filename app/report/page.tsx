@@ -54,7 +54,7 @@ const ReportPage = () => {
     console.log('Current user:', user);
     setIsLoading(true);
     try {
-      const baseUrl =  'https://upi-fraud-detection-backend1.onrender.com';
+      const baseUrl =  'https://upi-fraud-detection-backend1.onrender.com/api';
       console.log('Making request to:', `${baseUrl}/reports`);
       
       // Get auth header and ensure token exists

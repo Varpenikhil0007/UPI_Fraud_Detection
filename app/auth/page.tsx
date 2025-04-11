@@ -41,19 +41,19 @@ export default function AuthPage() {
     setError(null);
     setIsLoading(true);
 
-    try {
-      const baseUrl = 'https://upi-fraud-detection-backend1.onrender.com';
-      
-      if (currentState === 'Sign Up') {
-        const response = await fetch(`${baseUrl}/auth/register`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ name, email, password }),
-        });
+      try {
+        const baseUrl = 'https://upi-fraud-detection-backend1.onrender.com/api';
+        
+        if (currentState === 'Sign Up') {
+          const response = await fetch(`${baseUrl}/auth/register`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, password }),
+          });
 
-        const data = await response.json();
+          const data = await response.json();
 
         if (!response.ok) {
           throw new Error(data.error || 'Signup failed');
