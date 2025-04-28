@@ -157,7 +157,7 @@ return (
           Verify the authenticity of ID numbers using our advanced detection system.
           <br />
           <span className="text-sm mt-2 block">
-            Valid format: 10-20 characters, letters and numbers (case-insensitive)
+            Valid format: 10-30 characters, letters and numbers (case-insensitive)
             <br />
             Invalid format: AB12-XY89-ZW (special characters), ABC123 (too short)
           </span>
@@ -201,7 +201,7 @@ return (
               value={idNumber}
               onChange={(e) => setIdNumber(e.target.value)}
               className="flex-1"
-              maxLength={20}
+              maxLength={40}
             />
             <div className="flex gap-2">
               <Button 
@@ -272,7 +272,7 @@ return (
 
                 {!result.isValidFormat && (
                   <p className="text-sm text-gray-600 mt-2">
-                    Please ensure your ID contains 10-20 alphanumeric characters. This helps maintain security standards.
+                    Please ensure your ID contains 10-30 alphanumeric characters. This helps maintain security standards.
                   </p>
                 )}
               </div>
